@@ -35,6 +35,12 @@ import {
   create_class
 } from "../controllers/eschool/classController";
 
+import {
+  get_all_students,
+  get_student,
+  create_student
+} from "../controllers/eschool/studentController";
+
 import authMiddleware from "../middlewares/auth";
 
 const eschoolRouter = Router();
@@ -64,4 +70,8 @@ eschoolRouter
   .get("/classes/:id", get_class)
   .post("/classes/", create_class)
 
+  eschoolRouter
+  .get("/students", get_all_students)
+  .get("/students/:id", get_student)
+  .post("/students/", create_student)
 export default eschoolRouter;
