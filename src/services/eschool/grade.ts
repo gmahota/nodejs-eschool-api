@@ -1,5 +1,5 @@
 
-import Grade from '../../models/eschool/Grade'
+import Grade from '../../models/eschool/grade'
 import GradeRepository from '../../repository/eschool/gradeRepository'
 
 

@@ -1,6 +1,5 @@
-
-import Category from '../../models/eschool/Category'
-import CategoryRepository from '../../repository/eschool/CategoryRepository'
+import Category from '../../models/eschool/category'
+import CategoryRepository from '../../repository/eschool/categoryRepository'
 
 
 const getByCode = (id: string) =>

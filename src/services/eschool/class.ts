@@ -1,4 +1,3 @@
-
 import Class from '../../models/eschool/class'
 import ClassRepository from '../../repository/eschool/classRepository'
 

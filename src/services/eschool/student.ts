@@ -1,6 +1,6 @@
 
-import Student  from '../../models/eschool/Student'
-import StudentRepository  from '../../repository/eschool/StudentRepository'
+import Student  from '../../models/eschool/student'
+import StudentRepository  from '../../repository/eschool/studentRepository'
 
 const getById = (id:string) =>
     StudentRepository.findById(id)

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import StudentService from "../../services/eschool/Student";
-import Student from "../../models/eschool/Student";
+import StudentService from "../../services/eschool/student";
+import Student from "../../models/eschool/student";
 
 export const get_all_students = async (request: Request, response: Response) => {
   const Students = await StudentService.getAll();
