@@ -19,7 +19,7 @@ export default class academicYear {
     status?:string
 
     @Column()
-    type?:Boolean;
+    type?:boolean;
 
     @ManyToOne(() => School, (item) => item.id)
     @JoinColumn({ name: 'schoolId' })
