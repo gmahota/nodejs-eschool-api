@@ -5,6 +5,7 @@ import authMiddleware from "../middlewares/auth";
 import adminRouter from "./admin";
 import authRouter from "./auth";
 import baseRouter from "./base";
+import schoolsRouter from "./eschool";
 
 const routes = Router();
 
@@ -22,5 +23,6 @@ routes.get("/", async (request: Request, response: Response) => {
 routes.use('/api/admin',adminRouter);
 routes.use('/api/auth',authRouter);
 routes.use('/api/base',baseRouter);
+routes.use('/api/eschool',schoolsRouter);
 
 export default routes;
