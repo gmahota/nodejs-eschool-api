@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
 import School from './school';
 
-@Entity('AcademicYear')
+@Entity('academicYear')
 export default class academicYear {
     @PrimaryGeneratedColumn('increment')
     id: number;

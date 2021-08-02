@@ -11,12 +11,17 @@ export default class School {
     @Column({length: 50, nullable:true })
     schoolNumber?:string;
 
+    @Column({nullable:true })
+    vat?:number;
+
+    @Column({nullable:true })
+    socialSecurity?:number;
+
     @Column({length: 50, nullable:true })
     phoneNumber?: string;
     
     @Column({length: 50, nullable:true })
     cellphone?: string;
-
     
     @Column({length: 50, nullable:true })
     address?:string;
@@ -25,10 +30,7 @@ export default class School {
     email?: string;
 
     @Column({ length: 20, nullable: true })
-    status?: string;
-
-    @Column()
-    json?:string;
+    status?: string;    
 
     @Column()
     active: Boolean;
@@ -38,4 +40,7 @@ export default class School {
 
     @Column()
     updatedAt?: Date;
+
+    @Column()
+    json?:string;
 }
