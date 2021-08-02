@@ -17,6 +17,24 @@ import {
   create_academicLevel
 } from "../controllers/eschool/academicLevelController";
 
+import {
+  get_all_categories,
+  get_category,
+  create_category
+} from "../controllers/eschool/categoryController";
+
+import {
+  get_all_grades,
+  get_grade,
+  create_grade
+} from "../controllers/eschool/gradeController";
+
+import {
+  get_all_classes,
+  get_class,
+  create_class
+} from "../controllers/eschool/classController";
+
 import authMiddleware from "../middlewares/auth";
 
 const eschoolRouter = Router();
@@ -30,5 +48,20 @@ eschoolRouter
   .get("/academicLevels", get_all_academicLevels)
   .get("/academicLevels/:id", get_academicLevel)
   .post("/academicLevels/", create_academicLevel)
+
+eschoolRouter
+  .get("/categories", get_all_categories)
+  .get("/categories/:id", get_category)
+  .post("/categories/", create_category)
+
+eschoolRouter
+  .get("/grades", get_all_grades)
+  .get("/grades/:id", get_grade)
+  .post("/grades/", create_grade)
+
+  eschoolRouter
+  .get("/classes", get_all_classes)
+  .get("/classes/:id", get_class)
+  .post("/classes/", create_class)
 
 export default eschoolRouter;

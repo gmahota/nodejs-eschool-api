@@ -1,4 +1,5 @@
 import { Entity, Column, PrimaryColumn, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from 'typeorm';
+import School from './school';
 
 @Entity('category')
 export default class Category {
@@ -15,9 +16,13 @@ export default class Category {
     status?:string
 
     @Column()
-    type?:Boolean;
+    type?:string;
 
     @ManyToOne(() => Category, item => item.code)
     @JoinColumn({ name: 'parentId' })
-    parent:Category
+    parent?:Category
+
+    @ManyToOne(() => School, (item) => item.id)
+    @JoinColumn({ name: 'schoolId' })
+    school?: School;
 }

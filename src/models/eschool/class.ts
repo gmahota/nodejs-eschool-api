@@ -7,11 +7,11 @@ export default class Class {
     @PrimaryGeneratedColumn('increment')
     id: number;
 
-    @Column()
-    year: number;
-
     @Column({ length: 50, nullable: true })
     code?: string;
+
+    @Column()
+    year: number;    
 
     @Column({ length: 50, nullable: true })
     description?: string;
