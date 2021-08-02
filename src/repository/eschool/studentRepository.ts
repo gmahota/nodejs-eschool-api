@@ -7,10 +7,6 @@ interface Key {
   id?: any;
 }
 
-interface Key {
-  id?: any;
-}
-
 const findById = async function findById(id: string): Promise<Student> {
   const repository = getRepository(Student);
 

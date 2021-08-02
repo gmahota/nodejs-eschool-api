@@ -41,6 +41,24 @@ import {
   create_student
 } from "../controllers/eschool/studentController";
 
+import {
+  get_all_subjects,
+  get_subject,
+  create_subject
+} from "../controllers/eschool/subjectController";
+
+import {
+  get_all_teachers,
+  get_teacher,
+  create_teacher
+} from "../controllers/eschool/teacherController";
+
+import {
+  get_all_timetables,
+  get_timetable,
+  create_timetable
+} from "../controllers/eschool/timetableController";
+
 import authMiddleware from "../middlewares/auth";
 
 const eschoolRouter = Router();
@@ -65,13 +83,29 @@ eschoolRouter
   .get("/grades/:id", get_grade)
   .post("/grades/", create_grade)
 
-  eschoolRouter
+eschoolRouter
   .get("/classes", get_all_classes)
   .get("/classes/:id", get_class)
   .post("/classes/", create_class)
 
-  eschoolRouter
+eschoolRouter
   .get("/students", get_all_students)
   .get("/students/:id", get_student)
   .post("/students/", create_student)
+
+eschoolRouter
+  .get("/subjects", get_all_subjects)
+  .get("/subjects/:id", get_subject)
+  .post("/subjects/", create_subject)
+
+  eschoolRouter
+  .get("/teachers", get_all_teachers)
+  .get("/teachers/:id", get_teacher)
+  .post("/teachers/", create_teacher)
+
+  eschoolRouter
+  .get("/timetables", get_all_timetables)
+  .get("/timetables/:id", get_timetable)
+  .post("/timetables/", create_timetable)
+
 export default eschoolRouter;
