@@ -6,7 +6,6 @@ const findById = async function findById(id: string): Promise<Subject> {
 
   const item: Subject = await repository.findOneOrFail(
     { 
-      relations:['items'],
       where: { id: id }
     }    
   );

@@ -8,7 +8,7 @@ export const get_all_students = async (request: Request, response: Response) => 
 };
 
 export const get_student = async (request: Request, response: Response) => {
-  const { id } =request.params;
+  const { id } = request.params;
 
   const Student = await StudentService.getById(id);
 
@@ -24,6 +24,8 @@ export const create_student = async (request: Request, response: Response) => {
     surname,
     nickname,
     birthdate,
+    phoneNumber,
+    cellphone,
     address,
     province,
     country,
@@ -40,6 +42,8 @@ export const create_student = async (request: Request, response: Response) => {
       surname,
       nickname,
       birthdate,
+      phoneNumber,
+      cellphone,
       address,
       province,
       country,
