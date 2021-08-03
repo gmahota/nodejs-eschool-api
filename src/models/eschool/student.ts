@@ -19,6 +19,12 @@ export default class Student {
     
     @Column({nullable:true })
     birthdate?:Date;
+
+    @Column({length: 50, nullable:true })
+    phoneNumber?: string;
+    
+    @Column({length: 50, nullable:true })
+    cellphone?: string;
     
     @Column({length: 50, nullable:true })
     address?:string;
