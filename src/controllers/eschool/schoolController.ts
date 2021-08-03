@@ -26,6 +26,7 @@ export const get_school = async (request: Request, response: Response) => {
 export const create_school = async (request: Request, response: Response) => {
     const {
         schoolNumber,
+        name,
         vat,
         phoneNumber,
         cellphone,
@@ -42,6 +43,7 @@ export const create_school = async (request: Request, response: Response) => {
     try {
         let school: School = {
             id: 0,
+            name,
             schoolNumber,
             vat,
             socialSecurity,
