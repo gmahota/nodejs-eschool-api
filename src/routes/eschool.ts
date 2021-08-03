@@ -74,6 +74,12 @@ eschoolRouter
   .post("/academicLevels/", create_academicLevel)
 
 eschoolRouter
+  .get("/academicYears", get_all_academicYears)
+  .get("/academicYears/:id", get_academicYear)
+  .post("/academicYears/", create_academicYear)
+
+
+eschoolRouter
   .get("/categories", get_all_categories)
   .get("/categories/:id", get_category)
   .post("/categories/", create_category)
@@ -98,12 +104,12 @@ eschoolRouter
   .get("/subjects/:id", get_subject)
   .post("/subjects/", create_subject)
 
-  eschoolRouter
+eschoolRouter
   .get("/teachers", get_all_teachers)
   .get("/teachers/:id", get_teacher)
   .post("/teachers/", create_teacher)
 
-  eschoolRouter
+eschoolRouter
   .get("/timetables", get_all_timetables)
   .get("/timetables/:id", get_timetable)
   .post("/timetables/", create_timetable)
