@@ -6,7 +6,8 @@ const findByCode = async function findByCode(code: string): Promise<Category> {
   const Repository = getRepository(Category);
 
   const data: Category = await Repository.findOneOrFail({
-    where: { code: code }
+    where: { code: code },
+    relations:["parent","school"]
   });
 
   return data;
@@ -19,6 +20,7 @@ const findAll = async function findAll(): Promise<Category[]> {
     order: {
       code: "ASC"
     },
+    relations:["parent","school"]
   });
 
   return data;
